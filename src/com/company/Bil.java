@@ -1,43 +1,39 @@
 package com.company;
 
 public class Bil {
-   private String biltype;
-   private String model;
-   private String stelnummer;
-   private int antalDøre;
-   private String softwareV;
-   private double gpsX;
-   private double gpsY;
-   private double hastighed;
+    private String biltype;
+    private String model;
+    private String stelnummer;
+    private int antalDøre;
+    private String softwareV;
+    private double gpsX;
+    private double gpsY;
+    private double hastighed;
 
 
-   Ret ret = new Ret();
-   Bremse bremse = new Bremse();
-   Motor motor = new Motor(false);
-   Hjul hjul = new Hjul();
+    Ret ret = new Ret();
+    Bremse bremse = new Bremse();
+    Motor motor = new Motor(false);
+    Hjul hjul = new Hjul();
 
-    public void turnOn(Boolean on){
-        if(on == true){
+    public void turnOn(Boolean on) {
+        if (on == true) {
             motor.setOnOff(true);
             System.out.println("motoren er tændt");
-        }
-        else if(on == false) {
+        } else if (on == false) {
             motor.setOnOff(false);
             System.out.println("motoren er slukket");
-        }
-
-        else{
+        } else {
             motor.setOnOff(motor.isOnOff());
             System.out.println("motoren er tændt");
         }
     }
 
-    public void motor(){
+    public void motor() {
         boolean tændt = motor.isOnOff();
-        if(tændt == true){
+        if (tændt == true) {
             System.out.println("Motoren er tændt");
-        }
-        else{
+        } else {
             System.out.println("Motoren er slukket");
         }
     }
@@ -54,42 +50,6 @@ public class Bil {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Override
     public String toString() {
         return "Bil{" +
@@ -103,68 +63,6 @@ public class Bil {
                 ", hastighed=" + hastighed +
                 '}';
     }
-
-    public String getBiltype() {
-        return biltype;
-    }
-
-    public void setBiltype(String biltype) {
-        this.biltype = biltype;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getStelnummer() {
-        return stelnummer;
-    }
-
-    public void setStelnummer(String stelnummer) {
-        this.stelnummer = stelnummer;
-    }
-
-    public int getAntalDøre() {
-        return antalDøre;
-    }
-
-    public void setAntalDøre(int antalDøre) {
-        this.antalDøre = antalDøre;
-    }
-
-    public String getSoftwareV() {
-        return softwareV;
-    }
-
-    public void setSoftwareV(String softwareV) {
-        this.softwareV = softwareV;
-    }
-
-    public double getGpsX() {
-        return gpsX;
-    }
-
-    public void setGpsX(double gpsX) {
-        this.gpsX = gpsX;
-    }
-
-    public double getGpsY() {
-        return gpsY;
-    }
-
-    public void setGpsY(double gpsY) {
-        this.gpsY = gpsY;
-    }
-
-    public double getHastighed() {
-        return hastighed;
-    }
-
-    public void setHastighed(double hastighed) {
-        this.hastighed = hastighed;
-    }
 }
+
+
