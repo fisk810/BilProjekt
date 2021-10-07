@@ -16,12 +16,19 @@ public class Bil {
    Motor motor = new Motor(false);
    Hjul hjul = new Hjul();
 
-    public void turnOn(String input){
-        if(input.equals("y")){
+    public void turnOn(Boolean on){
+        if(on == true){
             motor.setOnOff(true);
+            System.out.println("motoren er tændt");
         }
-        else{
+        else if(on == false) {
             motor.setOnOff(false);
+            System.out.println("motoren er slukket");
+        }
+
+        else{
+            motor.setOnOff(motor.isOnOff());
+            System.out.println("motoren er tændt");
         }
     }
 
