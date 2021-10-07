@@ -11,7 +11,7 @@ public class Bil {
     private double hastighed;
 
 
-    Ret ret = new Ret();
+    Rat ret = new Rat();
     Bremse bremse = new Bremse();
     Motor motor = new Motor(false);
     Hjul hjul = new Hjul();
