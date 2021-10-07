@@ -1,7 +1,7 @@
 package com.company;
 
 public class Motor {
-    boolean onOff;
+    private boolean onOff;
 
     public Motor(boolean onOff) {
         this.onOff = onOff;

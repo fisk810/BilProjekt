@@ -11,10 +11,26 @@ public class Bil {
     private double hastighed;
 
 
-    Rat ret = new Rat();
+    Rat rat = new Rat(0);
     Bremse bremse = new Bremse();
     Motor motor = new Motor(false);
-    Hjul hjul = new Hjul();
+    Hjul hjul = new Hjul(0);
+
+    public void turnRat(double input){
+        if(input > 90 || input < -90){
+            System.out.println("The car can not turn that far");
+        }
+        else if(input == 0){
+            rat.setTurnDeg(input);
+            hjul.sethTurnDeg(input);
+            System.out.println("the car is now driving straight");
+        }
+        else {
+            rat.setTurnDeg(input);
+            hjul.sethTurnDeg(input);
+            System.out.println("the car is turning by " + input + " degrees.");
+        }
+    }
 
     public void turnOn(Boolean on) {
         if (on == true) {
